@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery  } from '@apollo/client';
+import { Outlet } from 'react-router-dom';
 import { QUERY_THOUGHTS } from '../utils/queries';
 import ThoughtList from '../components/ThoughtList';
 
@@ -21,6 +22,7 @@ const Home = () => {
           )}
           </div>
       </div>
+          <Outlet />
     </main>
   );
 };
