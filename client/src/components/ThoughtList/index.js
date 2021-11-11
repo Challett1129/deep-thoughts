@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ThoughtList = ({ thoughts, title }) => {
     if(!thoughts.length) {
@@ -33,7 +33,6 @@ const ThoughtList = ({ thoughts, title }) => {
                     </div>
                 </div>
             ))}
-            <Outlet />
     </div>
 )
 }
