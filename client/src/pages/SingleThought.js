@@ -1,7 +1,9 @@
 import React from 'react';
-import { useParams, Outlet } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useQuery } from '@apollo/client';
 import { QUERY_THOUGHT } from '../utils/queries';
+import ReactionForm from '../components/ReactionForm';
+import Auth from '../utils/auth';
 
 const SingleThought = props => {
 
@@ -30,7 +32,7 @@ const SingleThought = props => {
           <p>{thought.thoughtText}</p>
         </div>
       </div>
-      <Outlet />
+      {Auth.loggedIn() && <ReactionForm thoughtId={thought._id} />}
     </div>
   );
 };
