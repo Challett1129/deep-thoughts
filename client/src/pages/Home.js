@@ -14,7 +14,6 @@ const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const thoughts = data?.thoughts || []
   const loggedIn = Auth.loggedIn();
-  console.log(thoughts);
 
   return (
     <main>
